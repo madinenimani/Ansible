@@ -1,0 +1,146 @@
+    1  clear
+    2  sudo apt update
+    3  sudo apt install software-properties-common
+    4  sudo apt-add-repository ppa:ansible/ansible
+    5  sudo apt update
+    6  sudo apt install ansible
+    7  clear
+    8  ssh ubuntu@13.233.119.184
+    9  cd .ssh
+   10  ls
+   11  cat known_hosts 
+   12  cat authorized_keys 
+   13  ssh-keygen
+   14  ls
+   15  cat id_rsa.pub
+   16  watch ls -la
+   17  ssh ubuntu@13.233.119.184
+   18  clear
+   19  watch ls -la
+   20  ssh ubuntu@13.233.119.184
+   21  clear
+   22  watch ls -la
+   23  cd -
+   24  cd /home/ubuntu
+   25  watch ls -la
+   26  ansible version
+   27  ansible --version
+   28  clear
+   29  watch ls -la
+   30  mkdir Ansible
+   31  ls
+   32  cd Ansible/
+   33  s
+   34  ls
+   35  clear
+   36  vim inventory.ini
+   37  clear
+   38  ls
+   39  watch ls -la
+   40  ansible -i inventory.ini -m ping all
+   41  ansible -i inventory.ini -m shell -a "apt install tree -y" all
+   42  ansible -i inventory.ini -m shell -a "sudo apt install tree -y" all
+   43  clear
+   44  watch ls -la
+   45  vi inventory.ini 
+   46  watch ls -la
+   47  ssh ubuntu@43.204.142.75
+   48  clear
+   49  vi inventory.ini 
+   50  ansible -i inventory.ini -m ping db
+   51  ansible -i inventory.ini -m ping app
+   52  watch ls -la
+   53  ansible inventory.ini -m shell -a "sudo ls /etc" all
+   54  ansible -i inventory.ini -m shell -a "sudo ls /etc/" all
+   55  watch ls -la
+   56  clear
+   57  ls -la
+   58  watch ls -la
+   59  history
+   60  history > ansible.txt
+   61  ls -la
+   62  clear
+   63  ls
+   64  watch ls -la
+   65  ls
+   66  vi index.html
+   67  clear
+   68  ls
+   69  cd Ansible/
+   70  lsd
+   71  ls
+   72  vi index.html
+   73  cat index.html 
+   74  clear
+   75  ls
+   76  vi playbook.yaml
+   77  ls
+   78  cat playbook.yaml 
+   79  ansible-playbook -i inventory.ini playbook.yaml 
+   80  vi playbook.yaml
+   81  ansible-playbook -i inventory.ini playbook.yaml 
+   82  clear
+   83  ls
+   84  history > ansible.txt 
+   85  cat ansible.txt 
+   86  clear
+   87  git init
+   88  git inti
+   89  git intit
+   90  git init
+   91  ls
+   92  vi playbook.yaml 
+   93  cat playbook.yaml 
+   94  clear
+   95  watch ls -la
+   96  git init
+   97  watch ls -la
+   98  clear
+   99  cd A
+  100  ls
+  101  cd Ansible/
+  102  cd test/
+  103  sleep
+  104  watch ls -la
+  105  clear
+  106  cd ..
+  107  ls
+  108  rm -rf test
+  109  ansible-galaxy role init httpd
+  110  ls -ltr httpd/
+  111  cat playbook.yaml 
+  112  vi playbook.yaml 
+  113  tree httpd/
+  114  vi httpd/tasks//main.yml 
+  115  vi playbook.yaml 
+  116  ls
+  117  mv index.html httpd/files
+  118  ls
+  119  clear
+  120  tree httpd
+  121  vi httpd/tasks/main.yml 
+  122  ansible-playbook -i inventory.ini playbook.yaml 
+  123  clear
+  124  watch ls -la
+  125  ansible-playbook -i inventory.ini playbook.yaml 
+  126  clear
+  127  watch ls -la
+  128  ls
+  129  ansible-galaxy role init httpd
+  130  history > ansible.txt
+  131  vi ansible.txt 
+  132  watch ls -la
+  133  ansible-galaxy -h
+  134  clear
+  135  watch ls -la
+  136  ansible-galaxy role -h
+  137  watch ls -la
+  138  ansible-galaxy role install bsmeding.docker
+  139  ls ~/.ansible/roles
+  140  vim docker-playbook.yaml
+  141  ansible-palbook -i inventory.ini docker-playbook.yaml 
+  142  ansible-playbook -i inventory.ini docker-playbook.yaml 
+  143  cat inventory.ini 
+  144  clear
+  145  ls
+  146  history > ansible.txt 
